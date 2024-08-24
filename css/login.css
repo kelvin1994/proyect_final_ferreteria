@@ -1,0 +1,109 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #f4f4f4;
+  color: white;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), /* Color negro con 90% de opacidad */
+    url('../img/hero.jpg');
+  background-size: cover; /* Asegura que la imagen cubra todo el área del contenedor */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-attachment: fixed; /* Opcional: Fija la imagen de fondo para un efecto de paralaje */
+  position: relative; /* Para que el pseudo-elemento de la luz gire alrededor del contenido */
+  overflow: hidden; /* Evita que el pseudo-elemento de la luz se desborde del contenedor */
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(8, 8, 8, 0.3) 20%, rgba(0, 0, 0, 0) 80%);
+  opacity: 0.5; /* Ajusta la opacidad según el efecto deseado */
+  pointer-events: none;
+}
+
+
+
+.logo-container, .inicio-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inicio{
+  padding: 15px;
+  color: #ffb700;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+}
+
+.logo {
+  width: 150px;
+  animation: 1.5s ease 0s infinite loguito;
+}
+@keyframes loguito {
+  0%, 50%, 100% { transform: scale(1, 1); }
+  30%, 80% { transform: scale(0.92, 0.95); }
+}
+
+.login-container {
+  background: rgb(31, 31, 31);
+  padding: 20px;
+  border-radius: 8px;
+  width: 250px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.boton-container {
+  padding: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: white;
+}
+
+input[type="text"],
+input[type="password"] {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  width: 95%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.boton-ingresar {
+  width: 100%;
+  padding: 10px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: #ffb700;
+  color: rgb(33, 33, 33);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ff8800;
+}
+#message {
+  position: fixed; /* Mantiene la alerta fija en la ventana del navegador */
+  top: 10px; /* Ajusta el espacio desde la parte superior */
+  right: 10px; /* Ajusta el espacio desde la parte derecha */
+  z-index: 1050; /* Asegura que la alerta esté por encima de otros contenidos */
+  display: none; /* Inicialmente oculto */
+}
