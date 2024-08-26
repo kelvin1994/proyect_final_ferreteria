@@ -1,0 +1,210 @@
+[
+    {
+        "id": "prod-01",
+        "nom_prod": "Martillo de Carpintero",
+        "imagen": "https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/118007900_01/w=1500,h=1500,fit=padE",
+        "categoria": {
+            "nombre": "Herramienta",
+            "id": "herramienta"
+        },
+        "precio": 10.90,
+        "detalle": "Martillo resistente de acero con mango de madera, ideal para trabajos de carpintería."
+    },
+    {
+        "id": "prod-02",
+        "nom_prod": "Destornillador Philip",
+        "imagen": "https://i0.wp.com/grupocasalima.com/wp-content/uploads/2022/06/Destornillador-basico.webp?fit=900%2C900&ssl=1",
+        "categoria": {
+            "nombre": "Herramienta",
+            "id": "herramienta"
+        },
+        "precio": 5.90,
+        "detalle": "Destornillador de punta cruzada, ideal para apretar y aflojar tornillos Philip."
+    },
+    {
+        "id": "prod-03",
+        "nom_prod":"Llave Inglesa",
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_820231-MLU70348927680_072023-O.webp",
+        "categoria": {
+            "nombre": "Herramienta",
+            "id": "herramienta"
+        },
+        "precio": 12.99,
+        "detalle": "Llave ajustable de alta resistencia, perfecta para trabajos de mecánica."
+    },
+    {
+        "id": "prod-04",
+        "nom_prod":  "Taladro Inalámbrico",
+        "imagen":"https://promart.vteximg.com.br/arquivos/ids/7840650-1000-1000/imageUrl_1.jpg?v=638434422554670000",
+        "categoria": {
+            "nombre": "Herramienta",
+            "id": "herramienta"
+        },
+        "precio": 59.99,
+        "detalle": "Taladro inalámbrico con batería recargable, ideal para perforar en distintas superficies."
+    },
+    {
+        "id": "prod-05",
+        "nom_prod": "Sierra Circular",
+        "imagen":  "https://mundoconstructor.com.pe/wp-content/uploads/2024/01/A50004161_3.jpg",
+        "categoria": {
+            "nombre": "Herramienta",
+            "id": "herramienta"
+        },
+        "precio": 45.99,
+        "detalle": "Sierra circular de alto rendimiento, perfecta para cortar madera con precisión."
+    },
+    {
+        "id": "prod-06",
+        "nom_prod": "Cinta Métrica",
+        "imagen":  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSpP9nLwPragiAMPAfg_pKPYh0Cn_kIUNeCw&s",
+        "categoria": {
+            "nombre": "Medicion",
+            "id": "medicion"
+        },
+        "precio": 4,
+        "detalle": "Cinta métrica de 5 metros, ideal para mediciones precisas en cualquier proyecto."
+    },
+    {
+        "id": "prod-07",
+        "nom_prod": "Nivel de Burbuja",
+        "imagen":  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_IZek2Oi5A3wXsMEouQkfyzLFGx7ae1CSUg&s",
+        "categoria": {
+            "nombre": "Medicion",
+            "id": "medicion"
+        },
+        "precio": 9,
+        "detalle": "Nivel de burbuja de alta precisión, ideal para asegurar la nivelación en proyectos de construcción."
+    },
+    {
+        "id": "prod-08",
+        "nom_prod": "Caja de Herramientas",
+        "imagen": "https://eshop.wurth.pe/2819-large_default/caja-de-herramientas-66-piezas.jpg",
+        "categoria": {
+            "nombre": "Herramienta",
+            "id": "herramienta"
+        },
+        "precio": 30,
+        "detalle": "Caja de herramientas con 66 piezas, ideal para el almacenamiento y organización de herramientas."
+    },
+    {
+        "id": "prod-09",
+        "nom_prod":  "Cinta Aislante",
+        "imagen":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzk4EDiGtVEYndNxVsbHPSth00C0kQ-TJfRuLZB3UsamVxcy-K0zL7_U00tGQQdJHBhiM&usqp=CAU",
+        "categoria": {
+            "nombre": "Accesorio",
+            "id": "accesorio"
+        },
+        "precio": 2.50,
+        "detalle": "Cinta aislante de alta resistencia, ideal para trabajos eléctricos."
+    },
+    {
+        "id": "prod-10",
+        "nom_prod": "Multímetro Digital",
+        "imagen": "https://dojiw2m9tvv09.cloudfront.net/68942/product/X_17592.jpg?57&time=1721345165",
+        "categoria": {
+            "nombre": "Herramienta",
+            "id": "herramienta"
+        },
+        "precio": 19.90,
+        "detalle": "Multímetro digital con funciones de medición de voltaje, corriente y resistencia."
+    },
+    {
+        "id": "prod-10",
+        "nom_prod": "Broca para Madera",
+        "imagen": "https://www.aibitech.com/15745-large_default/juego-de-6-brocas-para-madera-jbma-6-11337-truper.jpg",
+        "categoria": {
+            "nombre": "Herramienta",
+            "id": "herramienta"
+        },
+        "precio": 7.90,
+        "detalle": "Juego de 6 brocas para madera, ideal para perforaciones precisas en proyectos de carpintería."
+    },
+    {
+        "id": "prod-11",
+        "nom_prod": "Guantes de Trabajo",
+        "imagen": "https://promart.vteximg.com.br/arquivos/ids/8046266-1000-1000/143170.jpg?v=638561555898900000",
+        "categoria": {
+            "nombre": "Herramienta",
+            "id": "herramienta"
+        },
+        "precio": 15,
+        "detalle": "Guantes de trabajo de alta resistencia, ideales para proteger las manos en trabajos pesados."
+    },
+    {
+        "id": "prod-12",
+        "nom_prod": "Mascarilla de Protección",
+        "imagen": "https://prosinfer.com/wp-content/uploads/2022/06/respirador-3m-6200.jpg",
+        "categoria": {
+            "nombre": "Accesorio",
+            "id": "accesorio"
+        },
+        "precio": 30,
+        "detalle": "Mascarilla de protección reutilizable, ideal para trabajos en ambientes con polvo y sustancias químicas."
+    },
+    {
+        "id": "prod-13",
+        "nom_prod": "Tornillos para Madera",
+        "imagen":"https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/sodimacPE/4122429_01/w=800,h=800,fit=pad",
+        "categoria": {
+            "nombre": "Accesorio",
+            "id": "accesorio"
+        },
+        "precio": 7.50,
+        "detalle": "Paquete de tornillos para madera, resistentes y duraderos, perfectos para cualquier proyecto de carpintería."
+    },
+    {
+        "id": "prod-14",
+        "nom_prod": "Clavos de Acero",
+        "imagen":  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRITlx9JLjUmqPE9vI0JHiocOQCbAL4q1k0Rw&s",
+        "categoria": {
+            "nombre": "Accesorio",
+            "id": "accesorio"
+        },
+        "precio": 5,
+        "detalle": "Clavos de acero de alta resistencia, ideales para trabajos de construcción y carpintería."
+    },
+    {
+        "id": "prod-15",
+        "nom_prod": "Adhesivo de Montaje",
+        "imagen": "https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/sodimacPE/1901397_01/w=800,h=800,fit=pad",
+        "categoria": {
+            "nombre": "Accesorio",
+            "id": "accesorio"
+        },
+        "precio": 1.99,
+        "detalle": "Adhesivo de montaje, ideal para fijaciones rápidas y duraderas en"
+    },
+    {
+        "id": "prod-16",
+        "nom_prod": "Pulidora Angular",
+        "imagen": "https://dojiw2m9tvv09.cloudfront.net/79550/product/itoolstp11418060344.jpg",
+        "categoria": {
+             "nombre": "Herramienta",
+            "id": "herramienta"
+        },
+        "precio": 50,
+          "detalle": "Adhesivo de montaje, ideal para fijaciones rápidas y duraderas en"
+    },
+    {
+        "id": "prod-17",
+        "nom_prod": "Soldador Eléctrico",
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_646488-MLU72647975396_112023-O.webp",
+        "categoria": {
+             "nombre": "Herramienta",
+            "id": "herramienta"
+        },
+        "precio": 15,
+          "detalle": "Adhesivo de montaje, ideal para fijaciones rápidas y duraderas en"
+    },
+    {
+        "id": "prod-18",
+        "nom_prod":  "Juego de Llaves Allen",
+        "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8LCkI2jNR7xDHee1IdJPW6vbduS4KQR1olg&s",
+        "categoria": {
+             "nombre": "Herramienta",
+            "id": "herramienta"
+        },
+        "precio": 10
+    }
+]

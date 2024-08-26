@@ -7,7 +7,7 @@ const users = [
 document.getElementById('loginForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Evita que el formulario se envíe de forma predeterminada
 
-    // Obtén los valores de usuario y contraseña
+
     const username = document.getElementById('username').value.toLowerCase(); // Convierte a minúsculas
     const password = document.getElementById('password').value;
 
@@ -22,17 +22,17 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     if (user) {
         // Credenciales correctas
         messageElement.textContent = '¡Inicio de sesión exitoso!';
-        messageElement.className = 'alert alert-success'; // Clase de éxito de Bootstrap
-        messageElement.style.display = 'block'; // Muestra la alerta
+        messageElement.className = 'alert alert-success'; 
+        messageElement.style.display = 'block'; 
         
         // Redirige a la página index.html
         setTimeout(() => {
             window.location.href = '../pages/index.html';
-        }, 500); // Redirige después de medio segundo para que el usuario pueda ver el mensaje
+        }, 500); 
     } else {
         // Credenciales incorrectas
         messageElement.textContent = 'Usuario o contraseña incorrectos.';
-        messageElement.className = 'alert alert-danger'; // Clase de error de Bootstrap
-        messageElement.style.display = 'block'; // Muestra la alerta
+        messageElement.className = 'alert alert-danger'; 
+        messageElement.style.display = 'block'; 
     }
 });

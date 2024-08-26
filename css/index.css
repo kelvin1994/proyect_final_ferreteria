@@ -4,6 +4,9 @@
   list-style: none;
   box-sizing: border-box;
 }
+.sin_estilo{
+  all: unset;
+}
 #body1{
   height: 100vh;
   overflow: auto;

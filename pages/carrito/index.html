@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CarpiShop</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="../../css/carrito.css" />
+  </head>
+  <body>
+    <!--HEADER AQUIIIII-->
+    <div style="all: unset" id="header-placeholder"></div>
+    <!--FIN HEADER-->
+
+    <!--INICIO MODAL-->
+    <div
+      class="modal fade"
+      id="miModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <h5 class="modal-title titulo" id="exampleModalLabel">
+            Detalle del Producto
+          </h5>
+
+          <div class="elementos">
+            <div class="modal-body uno">
+              <img id="modalImagen" src="" alt="" class="img-fluid" />
+            </div>
+            <div class="modal-header dos">
+              <h3 class="modal-titulo">Nombre producto</h3>
+              <h5 class="modal-title" id="modalTitulo">Título del Producto</h5>
+
+              <h3 class="modal-titulo">Descripción:</h3>
+              <h5 class="modal-title" id="modalDetalle">detalle</h5>
+
+              <h3 class="modal-titulo">Precio:</h3>
+              <h5 class="modal-title" id="modalPrecio"><span>S/. </span>detalle</h5>
+
+         
+            </div>
+          </div>
+
+          <button class="bi bi-cart4 producto-agregar" id="${producto.id}"> Añadir al Carrito</button>
+          
+
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--FIN MODAL-->
+    
+    <!--INICIO ESTILO MODAL-->
+
+    <style>
+      .modal-titulo {
+        background-color: #ffb700;
+        color: rgb(20, 20, 20);
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-size: 17px;
+        padding-left: 16px;
+        border-radius: 10px;
+      }
+      .modal-title {
+        color: rgb(23, 23, 23);
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        font-size: 16px;
+        padding-left: 15px;
+        border-radius: 10px;
+      }
+      .uno {
+        height: 250px;
+        width: 300px;
+      }
+      .dos {
+        display: inline;
+        height: 250px;
+        width: 300px;
+      }
+      .elementos {
+        display: flex;
+        justify-content: center;
+      }
+      .titulo {
+        display: flex;
+        justify-content: center;
+
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        padding: 10px;
+        background-color: #ffb700;
+        border-radius: 10px;
+      }
+      .modal-body {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      #modalImagen {
+        max-width: auto;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      #modalTitulo, #modalPrecio {
+        font-weight: bold;
+      }
+    </style>
+
+    <!--FIN ESTILO MODAL-->
+
+    <div class="wrapper">
+      <header class="header-mobile">
+        <h1 class="logo">CarpiShop</h1>
+        <button class="open-menu" id="open-menu">
+          <i class="bi bi-list"></i>
+        </button>
+      </header>
+      <aside>
+        <button class="close-menu" id="close-menu">
+          <i class="bi bi-x"></i>
+        </button>
+        <header>
+          <h1 class="logo">CarpiShop</h1>
+        </header>
+        <nav>
+          <ul class="menu">
+            <li>
+              <button id="todos" class="boton-menu boton-categoria active">
+                <i class="bi bi-hand-index-thumb-fill"></i> Todos los productos
+              </button>
+            </li>
+            <li>
+              <button id="abrigos" class="boton-menu boton-categoria">
+                <i class="bi bi-hand-index-thumb"></i> Abrigos
+              </button>
+            </li>
+            <li>
+              <button id="camisetas" class="boton-menu boton-categoria">
+                <i class="bi bi-hand-index-thumb"></i> Camisetas
+              </button>
+            </li>
+            <li>
+              <button id="pantalones" class="boton-menu boton-categoria">
+                <i class="bi bi-hand-index-thumb"></i> Pantalones
+              </button>
+            </li>
+            <li>
+              <a class="boton-menu boton-carrito" href="./carrito.html">
+                <i class="bi bi-cart-fill"></i> Carrito
+                <span id="numerito" class="numerito">0</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <footer>
+          <p class="texto-footer">© 2022 Carpi Coder</p>
+        </footer>
+      </aside>
+      <main>
+        <h2 class="titulo-principal" id="titulo-principal">
+          Todos los productos
+        </h2>
+        <div id="contenedor-productos" class="contenedor-productos">
+          <!-- Esto se va a rellenar con JS -->
+        </div>
+      </main>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.6/dist/umd/popper.min.js"
+      integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <script src="../../js/abrirModalB.js"></script>
+    <script src="../../js/header.js"></script>
+    <script src="../../js/carrito/main.js"></script>
+    <script src="../../js/carrito/menu.js"></script>
+  </body>
+</html>
