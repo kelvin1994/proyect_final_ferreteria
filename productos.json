@@ -205,6 +205,118 @@
              "nombre": "Herramienta",
             "id": "herramienta"
         },
-        "precio": 10
+        "precio": 10,
+         "detalle": "Aqui van los detalles de los productos, asi como marcas, material, color, tamaño y demas caracteristicas del productos."
+    },
+    {
+        "id": "prod-19",
+        "nom_prod": "Lámpara de Techo Moderna",
+        "imagen": "https://s.alicdn.com/@sc04/kf/HTB1x207XW1s3KVjSZFtq6yLOpXaR.jpg_300x300.jpg",
+        "categoria": {
+            "nombre": "Luminarias",
+            "id": "luminarias"
+        },
+        "precio": 25.99,
+         "detalle": "Aqui van los detalles de los productos, asi como marcas, material, color, tamaño y demas caracteristicas del productos."
+    },
+    {
+        "id": "prod-20",
+        "nom_prod": "Aplique de Pared LED",
+        "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCMRatxbAvcBenHjn3QFog-fUZYVIR5Wb5Lw&s",
+        "categoria": {
+            "nombre": "Luminarias",
+            "id": "luminarias"
+        },
+        "precio": 15.50,
+         "detalle": "Aqui van los detalles de los productos, asi como marcas, material, color, tamaño y demas caracteristicas del productos."
+    },
+    {
+        "id": "prod-21",
+        "nom_prod": "Lámpara de Pie Vintage",
+        "imagen": "https://lyadesign.es/cdn/shop/products/Lampara-De-Pie-Industrial-Anillos-8_1200x.jpg?v=1722180369",
+        "categoria": {
+            "nombre": "Luminarias",
+            "id": "luminarias"
+        },
+        "precio": 45.00,
+         "detalle": "Aqui van los detalles de los productos, asi como marcas, material, color, tamaño y demas caracteristicas del productos."
+    },
+    {
+        "id": "prod-22",
+        "nom_prod": "Lámpara Colgante Industrial",
+        "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSccv3ZxS_Xlz3cPT5p7uS62_PVGGZ9VKvaEQ&s",
+        "categoria": {
+            "nombre": "Luminarias",
+            "id": "luminarias"
+        },
+        "precio": 30.75,
+         "detalle": "Aqui van los detalles de los productos, asi como marcas, material, color, tamaño y demas caracteristicas del productos."
+    },
+    {
+        "id": "prod-23",
+        "nom_prod": "Foco LED Inteligente",
+        "imagen": "https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/730/PMP00001490136/full_image-1.png",
+        "categoria": {
+            "nombre": "Luminarias",
+            "id": "luminarias"
+        },
+        "precio": 10.90,
+         "detalle": "Aqui van los detalles de los productos, asi como marcas, material, color, tamaño y demas caracteristicas del productos."
+    },
+    {
+        "id": "prod-24",
+        "nom_prod": "Lámpara de Escritorio Ajustable",
+        "imagen": "https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/123359811_01/w=1500,h=1500,fit=pad",
+        "categoria": {
+            "nombre": "Luminarias",
+            "id": "luminarias"
+        },
+        "precio": 20.00,
+         "detalle": "Aqui van los detalles de los productos, asi como marcas, material, color, tamaño y demas caracteristicas del productos."
+    },
+    {
+        "id": "prod-25",
+        "nom_prod": "Plafón de Techo LED",
+        "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUocU7dHEsRMKvTxXEkKPxoHA6YxIjagxwOw&s",
+        "categoria": {
+            "nombre": "Luminarias",
+            "id": "luminarias"
+        },
+        "precio": 35.40,
+         "detalle": "Aqui van los detalles de los productos, asi como marcas, material, color, tamaño y demas caracteristicas del productos."
+    },
+    {
+        "id": "prod-26",
+        "nom_prod": "Tira LED RGB",
+        "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr1Q1jl-ro-cpsNR4Uxwf4hbZhA2tXVvV0nQ&s",
+        "categoria": {
+            "nombre": "Luminarias",
+            "id": "luminarias"
+        },
+        "precio": 12.99,
+         "detalle": "Aqui van los detalles de los productos, asi como marcas, material, color, tamaño y demas caracteristicas del productos."
+    },
+    {
+        "id": "prod-27",
+        "nom_prod": "Lámpara de Noche con Sensor",
+        "imagen": "https://s.libertaddigital.com/2022/01/25/luz-nocturna-con-sensor-de-movimiento-suright-361729.jpg",
+        "categoria": {
+            "nombre": "Luminarias",
+            "id": "luminarias"
+        },
+        "precio": 18.25,
+         "detalle": "Aqui van los detalles de los productos, asi como marcas, material, color, tamaño y demas caracteristicas del productos."
+    },
+    {
+        "id": "prod-28",
+        "nom_prod": "Lámpara Solar Exterior",
+        "imagen": "https://bigmarketperu.com/wp-content/uploads/2023/02/73.jpg",
+        "categoria": {
+            "nombre": "Luminarias",
+            "id": "luminarias"
+        },
+        "precio": 22.50,
+         "detalle": "Aqui van los detalles de los productos, asi como marcas, material, color, tamaño y demas caracteristicas del productos."
     }
+
 ]

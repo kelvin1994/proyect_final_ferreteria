@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
-    --clr-main: #ffae00;
+    --clr-main: #1a1a1a;;
     --clr-main-light: #785ce9;
     --clr-white: #ececec;
     --clr-gray: #e2e2e2;
@@ -26,7 +25,7 @@ ul {
     list-style-type: none;
 }
 
-a {
+a, i {
     text-decoration: none;
 }
 
@@ -60,21 +59,29 @@ aside {
 }
 
 .boton-menu {
+    color: #ffffff;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
     background-color: transparent;
     border: 0;
-    color: var(--clr-white);
     cursor: pointer;
     display: flex;
     align-items: center;
     gap: 1rem;
-    font-weight: 600;
     padding: 1rem;
-    font-size: .85rem;
+    text-decoration: none;
     width: 100%;
+}
+.boton-menu:hover{
+    background-color: #ffffff;
+    text-decoration: none;
+    color: #161616;
+    border-radius: 10px;
 }
 
 .boton-menu.active {
-    background-color: var(--clr-white);
+    background-color: #FFB700;
     color: var(--clr-main);
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
@@ -111,14 +118,21 @@ aside {
 }
 
 .boton-carrito {
-    margin-top: 2rem;
+   padding: 10px 26px;
+}
+.btn-carrito{
+    background-color: #158000;
+    border-radius: 10px;
+    border: none;
 }
 
 .numerito {
     background-color: var(--clr-white);
     color: var(--clr-main);
+    height: 25px;
+    width: 40px;
     padding: .15rem .25rem;
-    border-radius: .25rem;
+    border-radius: .15rem;
 }
 
 .boton-carrito.active .numerito {
