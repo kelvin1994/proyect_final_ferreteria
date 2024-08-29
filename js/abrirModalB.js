@@ -17,3 +17,4 @@ function abrirModalBootstrap(imagenSrc, nombreProducto, detalleProducto,precioPr
     // Mostrar el modal
     modal.show();
 }
+

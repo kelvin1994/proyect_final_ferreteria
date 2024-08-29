@@ -29,26 +29,56 @@ function cargarProductosCarrito() {
             div.innerHTML = `
                 <img class="carrito-producto-imagen" src="${producto.imagen}" alt="${producto.nom_prod}">
                 <div class="carrito-producto-titulo">
-                    <small>Título</small>
-                    <h3>${producto.nom_prod}</h3>
+                    <small class="titulo">PRODUCTO</small>
+                    <h3 class="abajo">${producto.nom_prod}</h3>
                 </div>
                 <div class="carrito-producto-cantidad">
-                    <small>Cantidadd</small>
-                    <p>${producto.cantidad}</p>
+                    <small class="titulo">CANTIDAD</small>
+                    <p class="abajo">${producto.cantidad}</p>
                 </div>
                 <div class="carrito-producto-precio">
-                    <small>Precio</small>
-                    <p>S/ ${producto.precio}</p>
+                    <small class="titulo">PRECIO</small>
+                    <p class="abajo">S/ ${producto.precio}</p>
                 </div>
                 <div class="carrito-producto-subtotal">
-                    <small>Subtotal</small>
-                    <p>S/ ${producto.precio * producto.cantidad}</p>
+                    <small class="titulo">SUB - TOTAL</small>
+                    <p class="abajo">S/ ${producto.precio * producto.cantidad}</p>
                 </div>
                 <button class="carrito-producto-eliminar" id="${producto.id}"><i class="bi bi-trash-fill"></i></button>
             `;
     
             contenedorCarritoProductos.append(div);
+
+            
         })
+
+        document.querySelectorAll('.titulo').forEach(titulo =>{
+            titulo.style.fontFamily = 'Roboto, sans-serif'; 
+            titulo.style.fontWeight = '400'; 
+            titulo.style.fontSize = '14px';
+            titulo.style.color = '#ffffff'; 
+            titulo.style.backgroundColor = '#00a2bf'; 
+            titulo.style.padding = '2px 100px';
+            titulo.style.borderRadius='5px';
+          });
+
+          document.querySelectorAll('.abajo').forEach(abajo =>{
+            abajo.style.fontFamily = 'Roboto, sans-serif'; 
+            abajo.style.fontWeight = '400'; 
+            abajo.style.fontSize = '18px';
+            abajo.style.color = '#1b1b1b'; 
+            abajo.style.textAlign = 'center';
+            abajo.style.backgroundColor = '#d8d8d8'; 
+            abajo.style.padding = '5px'
+          });
+
+          document.querySelectorAll('.carrito-producto-eliminar').forEach(boton =>{
+            boton.style.color = '#ffffff'; 
+            boton.style.textAlign = 'center';
+            boton.style.backgroundColor = '#e40045'; 
+            boton.style.borderRadius = '5px';
+            boton.style.padding = '8px'
+          });
     
     actualizarBotonesEliminar();
     actualizarTotal();
@@ -72,26 +102,22 @@ function actualizarBotonesEliminar() {
     });
 }
 
+
 function eliminarDelCarrito(e) {
-    Toastify({
+    Swal.fire({
         text: "Producto eliminado",
-        duration: 3000,
-        close: true,
-        gravity: "top", // `top` or `bottom`
-        position: "right", // `left`, `center` or `right`
-        stopOnFocus: true, // Prevents dismissing of toast on hover
-        style: {
-          background: "linear-gradient(to right, #4b33a8, #785ce9)",
-          borderRadius: "2rem",
-          textTransform: "uppercase",
-          fontSize: ".75rem"
-        },
-        offset: {
-            x: '1.5rem', // horizontal axis - can be a number or a string indicating unity. eg: '2em'
-            y: '1.5rem' // vertical axis - can be a number or a string indicating unity. eg: '2em'
-          },
-        onClick: function(){} // Callback after click
-      }).showToast();
+        icon: 'success', // Puedes cambiarlo a otro icono si lo prefieres, como 'warning', 'error', etc
+        fontFamily: 'Roboto, sans-serif',
+        fontSize: '56px',
+        showConfirmButton: false, // Si no quieres mostrar el botón de confirmación
+        timer: 950, // La alerta se cerrará automáticamente después de 3 segundos
+        toast: false, // Cambia a 'false' para que el Swal se muestre como una alerta modal en lugar de un toast
+        position: 'center', // Hace que la alerta aparezca en el centro de la pantalla
+   
+        customClass: {
+            popup: 'custom-swal-popup' // Agrega una clase personalizada si necesitas personalizar más el estilo
+        }
+    });
 
     const idBoton = e.currentTarget.id;
     const index = productosEnCarrito.findIndex(producto => producto.id === idBoton);
@@ -100,7 +126,6 @@ function eliminarDelCarrito(e) {
     cargarProductosCarrito();
 
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
-
 }
 
 botonVaciar.addEventListener("click", vaciarCarrito);
@@ -126,7 +151,7 @@ function vaciarCarrito() {
 
 function actualizarTotal() {
     const totalCalculado = productosEnCarrito.reduce((acc, producto) => acc + (producto.precio * producto.cantidad), 0);
-    total.innerText = `S/ ${totalCalculado}`;
+    total.innerText = `S/ ${totalCalculado.toFixed(2)}`;
 }
 
 botonComprar.addEventListener("click", comprarCarrito);

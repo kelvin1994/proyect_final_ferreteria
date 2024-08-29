@@ -34,7 +34,14 @@
     font-weight: 700;
     font-size: 21px;
   }
-  
+  .logo-empresa {
+
+    width: 200px;
+    height: auto;
+  }
+  #logo{
+    height: 70px;
+  }
   .abajo {
     font-family: "Roboto", sans-serif;
     font-weight: 400;

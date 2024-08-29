@@ -288,13 +288,23 @@ main {
 }
 
 .carrito-acciones-vaciar {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+
     border: 0;
-    background-color: var(--clr-gray);
-    padding: 1rem;
-    border-radius: 1rem;
-    color: var(--clr-main);
+    background-color:#e40045;
+    padding: 5px 15px;
+    border-radius: 10px;
+    color: var(--clr-white);
     text-transform: uppercase;
     cursor: pointer;
+}
+.custom-swal-popup {
+    font-family: "Roboto", sans-serif; /* Tipo de letra */
+    font-size: 20px;
+    font-weight: 500;
+    color: #127b00;
 }
 
 .carrito-acciones-derecha {
@@ -302,25 +312,42 @@ main {
 }
 
 .carrito-acciones-total {
+    border: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    
     display: flex;
-    background-color: var(--clr-gray);
-    padding: 1rem;
+    justify-content: center;
+    background-color: #FFB700;
+    padding: 15px 15px 0 15px;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
     color: var(--clr-main);
     text-transform: uppercase;
-    border-top-left-radius: 1rem;
-    border-bottom-left-radius: 1rem;
-    gap: 1rem;
+}
+#total{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
 }
 
 .carrito-acciones-comprar {
-    border: 0;
-    background-color: var(--clr-main);
-    padding: 1rem;
+    border: 0px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+
+    background-color: #009b15;
+    display: flex;
+    justify-content: center;
+    padding: 15px 15px 0 15px;
+    border-end-end-radius: 15px;
+    border-top-right-radius: 15px;
     color: var(--clr-white);
     text-transform: uppercase;
     cursor: pointer;
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
+
 }
 
 .header-mobile {
