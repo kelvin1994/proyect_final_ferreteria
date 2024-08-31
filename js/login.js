@@ -7,7 +7,6 @@ const users = [
 document.getElementById('loginForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Evita que el formulario se envíe de forma predeterminada
 
-
     const username = document.getElementById('username').value.toLowerCase(); // Convierte a minúsculas
     const password = document.getElementById('password').value;
 
@@ -16,23 +15,26 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         user.username.toLowerCase() === username && // Convierte a minúsculas para la comparación
         user.password === password
     );
-    
-    const messageElement = document.getElementById('message');
-    
+
     if (user) {
         // Credenciales correctas
-        messageElement.textContent = '¡Inicio de sesión exitoso!';
-        messageElement.className = 'alert alert-success'; 
-        messageElement.style.display = 'block'; 
-        
-        // Redirige a la página index.html
-        setTimeout(() => {
+        Swal.fire({
+            icon: 'success',
+            title: '¡Inicio de sesión exitoso!',
+            text: 'Serás redirigido a la página principal.',
+            timer: 2000,
+            showConfirmButton: false
+        }).then(() => {
+            // Redirige a la página index.html después de que se cierra el Swal
             window.location.href = '../pages/index.html';
-        }, 500); 
+        });
     } else {
         // Credenciales incorrectas
-        messageElement.textContent = 'Usuario o contraseña incorrectos.';
-        messageElement.className = 'alert alert-danger'; 
-        messageElement.style.display = 'block'; 
+        Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Usuario o contraseña incorrectos.',
+            confirmButtonText: 'Aceptar'
+        });
     }
 });

@@ -103,30 +103,27 @@ function actualizarBotonesEliminar() {
 }
 
 
-function eliminarDelCarrito(e) {
-    Swal.fire({
-        text: "Producto eliminado",
-        icon: 'success', // Puedes cambiarlo a otro icono si lo prefieres, como 'warning', 'error', etc
-        fontFamily: 'Roboto, sans-serif',
-        fontSize: '56px',
-        showConfirmButton: false, // Si no quieres mostrar el botón de confirmación
-        timer: 950, // La alerta se cerrará automáticamente después de 3 segundos
-        toast: false, // Cambia a 'false' para que el Swal se muestre como una alerta modal en lugar de un toast
-        position: 'center', // Hace que la alerta aparezca en el centro de la pantalla
-   
-        customClass: {
-            popup: 'custom-swal-popup' // Agrega una clase personalizada si necesitas personalizar más el estilo
-        }
-    });
-
+function eliminarDelCarrito(e) 
+{
     const idBoton = e.currentTarget.id;
     const index = productosEnCarrito.findIndex(producto => producto.id === idBoton);
-    
-    productosEnCarrito.splice(index, 1);
-    cargarProductosCarrito();
 
-    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+    Swal.fire({
+        title: '¿Estás seguro de eliminar el producto?',
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonText: 'Sí, eliminar',
+        cancelButtonText: 'No, cancelar'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            productosEnCarrito.splice(index, 1);
+            cargarProductosCarrito();
+            localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+
+        }
+    });
 }
+
 
 botonVaciar.addEventListener("click", vaciarCarrito);
 function vaciarCarrito() {

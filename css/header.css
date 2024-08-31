@@ -1,119 +1,323 @@
 .header-1 {
-    width: 100%;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 5%;
-    height: 100px;
-    background-color: #1a1a1a;
-  }
-  
-  .logo-empresa {
-    height: 70%;
-  }
-  
-  .group-location {
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
-  }
-  
-  .location {
-    padding: 15px;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    gap: 2%;
-  }
-  
-  .arriba {
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-size: 21px;
-  }
-  .logo-empresa {
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  height: 100px;
+  background-color: #1a1a1a;
+  position: absolute; 
+  z-index: 1000; 
+}
 
-    width: 200px;
-    height: auto;
+.header-2 {
+  width: 100%;
+  top: 100px; 
+  left: 0;
+  background-color: #ffb700;
+  position: absolute; 
+  z-index: 999; 
+  height: 50px; 
+}
+.header-22 {
+  width: 100%;
+  top: 0; 
+  left: 0;
+  background-color: #ffb700;
+  position: fixed; 
+  z-index: 999; 
+  height: 50px; 
+}
+
+.logo-empresa {
+  height: 10%;
+}
+.nav-linkk {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 15px 0px 1px 0;
+  text-decoration: none;
+}
+.nav-linkk:hover {
+  text-decoration: none;
+}
+.nav_tres {
+  color: #1e1e1e;
+}
+.nav_tres:hover {
+  color: #ffffff;
+  border-bottom: 2px solid rgb(255, 255, 255);
+}
+.tienda {
+  color: white;
+  text-shadow: 0 -1px 1px rgba(19, 28, 0, 0.35);
+  text-decoration: none;
+}
+.tienda:hover {
+  color: white;
+  text-decoration: none;
+}
+
+#btn-salir {
+
+  border-radius: 20px;
+  padding: 5px;
+}
+.btn-salir-div {
+  padding-bottom: 20px;
+  padding-left: 15px;
+}
+
+.btn-tienda {
+  background: -webkit-linear-gradient(top, #8fcf00, #6b9c00);
+  padding: 0px 50px 3px 50px;
+  border-radius: 20px;
+  border: 1px solid #ebff84;
+}
+
+.btn-tienda:hover {
+  background: -webkit-linear-gradient(top, #ff002b, #d10023);
+  padding: 0px 50px 3px 50px;
+  border-radius: 20px;
+  border: 1px solid #ffffff;
+  color: white;
+}
+
+.group-location {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.location {
+  padding: 15px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 2%;
+}
+
+.nav_items-1 {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav_items-2 {
+  padding-left: 100px;
+
+  display: flex;
+  justify-content: space-between;
+}
+.nav_items-3 {
+  padding-right: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.arriba {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 21px;
+}
+.logo-empresa {
+  width: 200px;
+  height: auto;
+}
+#logo {
+  height: 70px;
+}
+.abajo {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: white;
+  font-size: 16px;
+}
+.abajo:hover {
+  color: #ffb700;
+  text-decoration: none;
+}
+
+.large-icon {
+  font-size: 25px;
+}
+
+.menu-icono {
+  width: 25px;
+}
+
+label {
+  cursor: pointer;
+  display: none;
+}
+
+.font-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  margin-right: 15px;
+  padding-inline: 50px;
+  font-weight: bold;
+}
+
+.custom-padding {
+  padding: 0px 10px;
+}
+
+#bg-blanco {
+  background-color: #ffffff;
+  color: #212121;
+}
+
+#bg-blanco:hover {
+  background-color: #212121;
+  color: #ffffff;
+}
+
+@media (max-width: 991px) {
+  label {
+    display: initial;
   }
-  #logo{
-    height: 70px;
+  .menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #364273;
+    display: none;
   }
-  .abajo {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    color: white;
+
+  .item {
+    margin: 0 0 20px 0;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100px;
+  }
+
+  #menu:checked ~ .menu {
+    display: initial;
+  }
+}
+
+/**RESPONSIVE*/
+
+@media (max-width: 1200px) {
+  .header-1 {
+    padding: 0 3%;
+    height: 90px;
+  }
+  .btn-tienda {
+  
+    padding: 0px 10px 3px 10px;
+    border-radius: 20px;
+
+  }
+  
+  .nav_items-1 {
+    padding: 2px;
+
+  }
+  .header-2, .header-22 {
+    height: 45px;
+
+  }
+  .nav_items-2 {
+    padding-left: 5px;
+  
+  }
+
+  .nav-linkk {
+    font-size: 18px;
+  }
+
+  .font-text {
+    font-size: 18px;
+    padding-inline: 40px;
+  }
+
+  .logo-empresa {
+    width: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-1 {
+    padding: 0 2%;
+    height: 80px;
+  }
+
+  .header-2, .header-22 {
+    height: 40px;
+  }
+
+  .nav-linkk {
     font-size: 16px;
+  }
+
+  .font-text {
+    font-size: 16px;
+    padding-inline: 30px;
+  }
+
+  .logo-empresa {
+    width: 150px;
+  }
+  
+  .menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #364273;
+    display: none;
+  }
+
+  .item {
+    margin: 0 0 10px 0;
+    width: 100%;
+  }
+
+  .btn {
+    width: 80px;
   }
   
   .large-icon {
-    font-size: 25px;
-  }
-  
-  .menu-icono {
-    width: 25px;
-  }
-  
-  label {
-    cursor: pointer;
-    display: none;
-  }
-  
-  .header-2 {
-    width: 100%;
-    height: 100%;
-    background-color: #ffb700;
-    color: #f8f8f8;
-  }
-  
-  .font-text {
-    font-family: "Roboto", sans-serif;
     font-size: 20px;
-    margin-right: 15px;
-    padding-inline: 50px;
-    font-weight: bold;
   }
-  
-  .custom-padding {
-    padding: 0px 10px;
+}
+
+@media (max-width: 480px) {
+  .header-1 {
+    flex-direction: column;
+    height: auto;
   }
-  
-  #bg-blanco {
-    background-color: #ffffff;
-    color: #212121;
+
+  .header-2, .header-22 {
+    height: 35px;
   }
-  
-  #bg-blanco:hover {
-    background-color: #212121;
-    color: #ffffff;
+
+  .nav-linkk {
+    font-size: 14px;
   }
-  
-  @media (max-width: 991px) {
-    label {
-      display: initial;
-    }
-    .menu {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      background-color: #1d41cf;
-      display: none;
-    }
-  
-    .item {
-      margin: 0 0 20px 0;
-      width: 100%;
-    }
-  
-    .btn {
-      width: 100px;
-    }
-  
-    #menu:checked ~ .menu {
-      display: initial;
-    }
+
+  .font-text {
+    font-size: 14px;
+    padding-inline: 20px;
   }
+
+  .logo-empresa {
+    width: 120px;
+  }
+
+  .btn {
+    width: 70px;
+    padding: 0 10px;
+  }
+}
+
+

@@ -111,12 +111,12 @@
 <div class="container3">
   <div class="promociones" id="id_promociones">
 
-    <div class="promo_01 uno">
+    <div class="promo_01 uno" id="uno">
       <button class="pro_arriba">NUEVO</button>
       <h1 class="p_marca">BAUMAX</h1>
       <h3 class="pro_abajo">DESCUBRE LA MARCA</h3>
       <div class="div_boton">
-        <button class="p_comprar">Comprar Ahora</button>
+        <button id="openModalBtn" class="p_comprar">Comprar Ahora</button>
       </div>
     </div>
 
@@ -136,6 +136,8 @@
         <button class="p_comprar">Comprar Ahora</button>
       </div>
     </div>
+
+
   </div>
 
 
@@ -153,37 +155,31 @@
     </div>
   </div>
   <div class="container-prod">
-    <div>
-      <div>
-        <span>SELECCIONE LA CATEGORIA DE SU</span><span>PRODUCTO</span> 
-      </div>
-     
-    </div>
-
-
 
     <div class="cate_container">
-   <div class="cate_01">
-    <button class="btn-herramienta">Herramientas</button>
+   <div class="cate_01 herramienta">
+    <button id="herramienta" class="btn-herramienta"><i class="fa-solid fa-hammer"></i> CATEGORIA: HERRAMIENTAS</button>
    </div>
-   <div class="cate_01">hola</div>
-   <div class="cate_01">hola</div>
-   <div class="cate_01">hola</div>
+   <div class="cate_01 medicion">
+    <button class="btn-herramienta" id="medicion"><i class="fa-solid fa-hammer"></i> CATEGORIA: MEDICIÓN</button>
+   </div>
+   <div class="cate_01 accesorios">
+    <button class="btn-herramienta" id="accesorio"><i class="fa-solid fa-hammer"></i> CATEGORIA: ACCESORIOS</button>
+   </div>
+   <div class="cate_01 luminarias">
+    <button class="btn-herramienta" id="luminarias"><i class="fa-solid fa-hammer"></i> CATEGORIA: LUMINARIAS</button>
+   </div>
     </div>
-    
 
-<div id="product-container"></div>
-
-
-
-
-  </div>
-
-
- 
-
-
-
+      <!--SCRIP PARA ABRIR LA TIENDA CON EL BOTON-->
+      <script>
+        document.querySelectorAll(".btn-herramienta").forEach(boton => {
+            boton.onclick = function () {
+              const id = this.id;
+                window.location.href = `../pages/carrito/index.html#${id}`;
+            };
+        });
+    </script>
 
 <footer class="footer">
  <div class="footer-container">
@@ -191,43 +187,60 @@
     <div class="footer-link">
       <h4>Compania</h4>
       <ul>
-        <li><a href="">Nosotros</a></li>
-        <li><a href="">Nuestros Servicios</a></li>
-        <li><a href="">Politicas de Privacidad</a></li>
-        <li><a href="">Afiliate</a></li>
+        <li><a href=""  type="button" style="text-decoration: none;" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Nosotros</a></li>
+        <li><a href=""  type="button" style="text-decoration: none;" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Politicas de Privacidad</a></li>
       </ul>
     </div>
     <div class="footer-link">
       <h4>Ayuda</h4>
       <ul>
-        <li><a href="">Preguntas</a></li>
-        <li><a href="">Compras</a></li>
-        <li><a href="">Envios</a></li>
-        <li><a href="">Pago</a></li>
+        <li><a href=""  type="button" style="text-decoration: none;" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Preguntas</a></li>
+        <li><a href=""  type="button" style="text-decoration: none;" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Compras</a></li>
+        <li><a href=""  type="button" style="text-decoration: none;" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Envios</a></li>
+
       </ul>
     </div>
     <div class="footer-link">
       <h4>Atención al Cliente</h4>
       <ul>
-        <li><a href="">Politicas de Privacidad</a></li>
-        <li><a href="">Terminos & Condiciones</a></li>
-        <li><a href="">Politicas de Envio</a></li>
-        <li><a href="">Libro de Reclamaciones</a></li>
+        <li><a href=""  type="button" style="text-decoration: none;" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Politicas de Privacidad</a></li>
+        <li><a href=""  type="button" style="text-decoration: none;" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Terminos & Condiciones</a></li>
+        <li><a href=""  type="button" style="text-decoration: none;" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Politicas de Envio</a></li>
+        <li><a href=""  type="button" style="text-decoration: none;" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Libro de Reclamaciones</a></li>
       </ul>
     </div>
 
     <div class="footer-link">
       <h4>Siguenos</h4>
       <div class="social-link">
-        <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
-        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-        <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+        <a href="https://www.facebook.com/ferreteria.marquez.9" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+        <a href="https://www.facebook.com/ferreteria.marquez.9"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="https://www.facebook.com/ferreteria.marquez.9"><i class="fa-brands fa-square-instagram"></i></a>
 
       </div>
     </div>
      
   </div>
  </div>
+
+ <div class="modal fade"  id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog" >
+    <div class="modal-content"  style="background-color: black;">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel" style="color: #ffffff;" >INFORMACION DE LA EMPRESA</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body"style="background-color: black; color: #FFB700;" >
+          Tienda Virtual es una empresa que ofrece plataformas de E-commerce a pequeñas, medianas.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 </footer>
 </div>
 
@@ -235,6 +248,9 @@
 
 </div>
   </div>
+
+<!--JS PARA ABRIR-->
+<script src="../js/carrito/main.js"></script>
 
 <!--SLIDER PARA LAS MARCAS-->
 <script src="../js/marcas.js"></script>

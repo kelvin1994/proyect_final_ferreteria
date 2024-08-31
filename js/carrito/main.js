@@ -3,7 +3,7 @@ fetch('/productos.json')
     .then(response => response.json())
     .then(data => {
         productos = data;
-        cargarProductos(productos);
+        onload();
     })
 
 
@@ -18,9 +18,6 @@ botonesCategorias.forEach(boton => boton.addEventListener("click", () => {
     aside.classList.remove("aside-visible");
 }))
 
-
-
-
 function cargarProductos(productosElegidos) {
 
     contenedorProductos.innerHTML = "";
@@ -33,16 +30,13 @@ function cargarProductos(productosElegidos) {
         <div class="contenedor">
           <img class="producto-imagen" src="${producto.imagen}" alt="${producto.nom_prod}">
         </div>
-          
             <div class="producto-detalles">
                 <h3 class="producto-titulo">${producto.nom_prod}</h3>
                 <p class="producto-precio">S/ ${producto.precio}</p>
                 <button class="bi bi-cart4 producto-agregar" id="${producto.id}"> Añadir al Carrito</button>
             </div>
         `;
-
         contenedorProductos.append(div);
-
         // Obtener la imagen y añadir el event listener para abrir el modal
         const img = div.querySelector(".producto-imagen");
         img.addEventListener("click", function() 
@@ -50,35 +44,33 @@ function cargarProductos(productosElegidos) {
             abrirModalBootstrap(producto.imagen, producto.nom_prod,producto.detalle,producto.precio);
         });
     });
-
     actualizarBotonesAgregar();
 }
+/** */
+function cargarProductosCategoria (boton){
+    botonesCategorias.forEach(boton => boton.classList.remove("active"));
 
+        boton.classList.add("active");
 
-/**AÑADIENDO AL CARRITO DESDE EL MODAL */
-
-
-
-
+        if (boton.id != "todos") {
+            const productoCategoria = productos.find(producto => producto.categoria.id === boton.id);
+            tituloPrincipal.innerText = productoCategoria.categoria.nombre;
+            const productosBoton = productos.filter(producto => producto.categoria.id === boton.id);
+            cargarProductos(productosBoton);
+        } else {
+            tituloPrincipal.innerText = "Todossss los productos";
+            cargarProductos(productos);
+        }
+}
 
 botonesCategorias.forEach(boton => {
     boton.addEventListener("click", (e) => {
-
-        botonesCategorias.forEach(boton => boton.classList.remove("active"));
-        e.currentTarget.classList.add("active");
-
-        if (e.currentTarget.id != "todos") {
-            const productoCategoria = productos.find(producto => producto.categoria.id === e.currentTarget.id);
-            tituloPrincipal.innerText = productoCategoria.categoria.nombre;
-            const productosBoton = productos.filter(producto => producto.categoria.id === e.currentTarget.id);
-            cargarProductos(productosBoton);
-        } else {
-            tituloPrincipal.innerText = "Todos los productos";
-            cargarProductos(productos);
-        }
-
+        cargarProductosCategoria(e.currentTarget);
     })
 });
+
+onload();
+
 
 function actualizarBotonesAgregar() {
     botonesAgregar = document.querySelectorAll(".producto-agregar");
@@ -128,4 +120,18 @@ function actualizarNumerito() {
 function actualizarNumerito() {
     let nuevoNumerito = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
     numerito.innerText = nuevoNumerito;
+}
+
+
+
+async function onload () {
+    const cat = location.hash.substr(1);
+    if (cat !== '') {
+        const boton = document.getElementById(cat);
+        boton.click();
+        cargarProductosCategoria(boton);
+    }
+    else{
+        cargarProductos(productos);
+    }
 }
