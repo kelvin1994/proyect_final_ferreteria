@@ -37,7 +37,6 @@ function cargarProductos(productosElegidos) {
             </div>
         `;
         contenedorProductos.append(div);
-        // Obtener la imagen y añadir el event listener para abrir el modal
         const img = div.querySelector(".producto-imagen");
         img.addEventListener("click", function() 
         {
